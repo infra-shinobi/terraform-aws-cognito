@@ -2,8 +2,6 @@
 
 ## Prerequisites and Providers
 
----
-
 This table contains both Prerequisites and Providers:
 
 | Description   | Name      | Version     |
