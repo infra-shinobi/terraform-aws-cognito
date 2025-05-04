@@ -4,8 +4,6 @@
 
 This Terraform module provides a comprehensive, flexible, and production-ready implementation of [AWS Cognito](https://aws.amazon.com/cognito/). It aims to simplify user pool and identity pool setup with a single unified interface, addressing gaps found in other Cognito modules by offering extended configuration and control over almost all Cognito features.
 
----
-
 ## Prerequisites and Providers
 
 | Description   | Name      | Version     |
@@ -13,7 +11,6 @@ This Terraform module provides a comprehensive, flexible, and production-ready i
 | Prerequisite  | Terraform | `>= 1.6.6`  |
 | Provider      | aws       | `>= 5.31.0` |
 
----
 
 ## Why This Module?
 
@@ -26,7 +23,6 @@ While several Terraform modules for AWS Cognito exist, many are either overly op
 - Clean outputs and structured inputs
 - Follows Terraform best practices for readability and reusability
 
----
 
 ## Usage
 
@@ -58,13 +54,10 @@ module "cognito" {
 }
 ```
 
----
-
 ## Inputs and Outputs
 
 Please refer to the [docs/inputs.md](./docs/inputs.md) and [docs/outputs.md](./docs/outputs.md) files for a detailed explanation of all module inputs and outputs.
 
----
 
 ## Contributing
 
@@ -78,13 +71,9 @@ Contributions, issues, and feature requests are welcome! Here’s how you can he
 
 Please make sure to update tests as appropriate and follow Terraform module structure and best practices.
 
----
-
 ## Authors
 
 Module maintained by [infra-shinobi](https://github.com/infra-shinobi).
-
----
 
 ## Acknowledgements
 
