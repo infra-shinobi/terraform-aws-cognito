@@ -1,4 +1,4 @@
-# terraform-aws-cognito
+# Terraform AWS Cognito
 
 ## Prerequisites and Providers
 
