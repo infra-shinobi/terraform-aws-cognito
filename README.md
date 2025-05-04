@@ -80,12 +80,6 @@ Please make sure to update tests as appropriate and follow Terraform module stru
 
 ---
 
-## License
-
-This project is licensed under the [Mozilla Public License Version 2.0](LICENSE). You can find the full license text in the `LICENSE` file or by visiting [https://www.mozilla.org/en-US/MPL/2.0/](https://www.mozilla.org/en-US/MPL/2.0/).
-
----
-
 ## Authors
 
 Module maintained by [infra-shinobi](https://github.com/infra-shinobi).
