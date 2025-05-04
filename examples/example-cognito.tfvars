@@ -1,8 +1,10 @@
-name                              = "test-cognito"
-user_pool_name                    = "test-cognito"
-enable_username_case_sensitivity  = "true"
-enable_token_revocation = true
-deletion_protection = "ACTIVE"
+aws_region = "us-east-1"
+
+name                             = "test-cognito"
+user_pool_name                   = "test-cognito"
+enable_username_case_sensitivity = "true"
+enable_token_revocation          = true
+deletion_protection              = "ACTIVE"
 alias_attributes = [
   "email",
   "preferred_username",
@@ -44,14 +46,14 @@ admin_create_user_config_allow_admin_create_user_only = false
 
 clients = [
   {
-    name = "iam-client"
+    name                                 = "iam-client"
     allowed_oauth_flows_user_pool_client = false
-    explicit_auth_flows           = [
+    explicit_auth_flows = [
       "ALLOW_ADMIN_USER_PASSWORD_AUTH",
       "ALLOW_REFRESH_TOKEN_AUTH",
       "ALLOW_USER_PASSWORD_AUTH"
     ]
-    read_attributes               = [
+    read_attributes = [
       "address",
       "birthdate",
       "custom:createdBy",

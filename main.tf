@@ -7,20 +7,19 @@ locals {
 
 provider "aws" {
   region  = var.aws_region
-  profile = var.aws_profile  # optional, only if using named profile
 }
 
 resource "aws_cognito_user_pool" "pool" {
   count = var.enabled ? 1 : 0
 
-  alias_attributes           = var.alias_attributes != null ? var.alias_attributes : local.alias_attributes
-  auto_verified_attributes   = var.auto_verified_attributes
-  name                       = var.user_pool_name
-  username_attributes        = var.username_attributes
+  alias_attributes         = var.alias_attributes != null ? var.alias_attributes : local.alias_attributes
+  auto_verified_attributes = var.auto_verified_attributes
+  name                     = var.user_pool_name
+  username_attributes      = var.username_attributes
 
   sms_authentication_message = var.sms_authentication_message
 
-  mfa_configuration          = var.mfa_configuration
+  mfa_configuration = var.mfa_configuration
 
   email_verification_subject = var.email_verification_subject == "" || var.email_verification_subject == null ? var.admin_create_user_config_email_subject : var.email_verification_subject
   email_verification_message = var.email_verification_message == "" || var.email_verification_message == null ? var.admin_create_user_config_email_message : var.email_verification_message
@@ -446,7 +445,7 @@ locals {
     prevent_user_existence_errors        = lookup(e, "prevent_user_existence_errors", null)
     write_attributes                     = lookup(e, "write_attributes", null)
     enable_token_revocation              = lookup(e, "enable_token_revocation", null)
-  }
+    }
   ]
 
   clients = length(var.clients) == 0 && (var.name == null || var.name == "") ? [] : (length(var.clients) > 0 ? local.clients_parsed : local.clients_default)

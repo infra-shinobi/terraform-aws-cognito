@@ -5,12 +5,6 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "aws_profile" {
-  description = "AWS CLI named profile"
-  type        = string
-  default     = null
-}
-
 # aws_cognito_user_pool
 variable "enabled" {
   description = "Change to false to avoid deploying any resources"
