@@ -6,7 +6,7 @@ locals {
 }
 
 provider "aws" {
-  region  = var.aws_region
+  region = var.aws_region
 }
 
 resource "aws_cognito_user_pool" "pool" {
